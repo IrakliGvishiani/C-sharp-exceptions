@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace ConsoleApp2
 {
@@ -6,144 +7,61 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
+            string path = "C:\\Users\\user\\source\\repos\\ConsoleApp2\\ConsoleApp2\\Teams\\Team.txt";
 
-            //try
-            //{
-            //    throw new Exception("test");
-            //}
-            //catch (Exception)
-            //{
+            string[] lines = System.IO.File.ReadAllLines(path);
 
-
-            //}
-            //finally
-            //{
-            //    Console.WriteLine("Hello, World!");
-            //}
-
-            //try
-            //{
-            //    int a = 10;
-
-            //    int b = 0;
-
-            //    Console.WriteLine(a / b);
-            //}
-            //catch(Exception ex)
-            //{
-            //    Console.WriteLine(ex.Message);
-            //}
-
-            //int age = int.Parse(Console.ReadLine());
-
-            //if (age > 18)
-            //{
-            //        throw new Exception("Age greater than 18 is not allowed.");
-            //}
-            ////////////////////////////////////////////
-            try
-            {
-                Console.WriteLine("enter first number");
-                int num1 = int.Parse(Console.ReadLine());
-
-                Console.WriteLine("enter second number");
-                int num2 = int.Parse(Console.ReadLine());
-
-                Console.WriteLine(num1 / num2);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("error: " + ex.Message);
-            }
+            
+            FootballTeams[] teams = new FootballTeams[lines.Length];
 
 
-            try
-            {
-                int num = int.Parse(Console.ReadLine());
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("Input format is incorrect.");
-            }
-            /////////////////////////////////////////
-            bool condition = true;
 
-            while (condition == true)
+
+            for (int i = 0; i < lines.Length; i++)
             {
 
-                try
+                string[] parts = lines[i].Split('|');
+
+                FootballTeams team = new()
                 {
-                    int num = int.Parse(Console.ReadLine());
-                    condition = false;
-                    Console.WriteLine("You entered: " + num);
-                }
+                    clubID = int.Parse(parts[0].Trim()),
+                    clubName = parts[1].Trim(),
+                    country = parts[2].Trim(),
+                    city = parts[3].Trim(),
 
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Error: " + ex.Message);
-                }
+                    foundedYear = int.Parse(parts[4].Trim()),
+                    stadiumName = parts[5].Trim(),
+
+                    titleWon = int.Parse(parts[6].Trim())
 
 
+                };
 
+                teams[i] = team;
+
+            //    Console.WriteLine(
+            // $@"Club ID: {team.clubID}
+            //Club Name: {team.clubName}
+            //Country: {team.country}
+            //City: {team.city}
+            //Founded Year: {team.foundedYear}
+            //Stadium Name: {team.stadiumName}
+            //Titles Won: {team.titleWon}
+            //----------------------------");
             }
 
-
-
-            int[] numbers = [10, 20, 30, 40];
-            int userGuess = int.Parse(Console.ReadLine());
-
-            try
-
+            foreach (var team in teams)
             {
-                if (userGuess > numbers.Length)
-                {
-                    throw new IndexOutOfRangeException("Index out of range.");
-                }
+               Console.WriteLine(
+            $@"Club ID: {team.clubID}
+            Club Name: {team.clubName}
+            Country: {team.country}
+            City: {team.city}
+            Founded Year: {team.foundedYear}
+            Stadium Name: {team.stadiumName}
+            Titles Won: {team.titleWon}
+            ----------------------------");
 
-                //Console.WriteLine(numbers[i]);
-            }
-            catch (IndexOutOfRangeException ex)
-            {
-                Console.WriteLine("Error: " + ex.Message);
-            }
-
-
-            int age = int.Parse(Console.ReadLine());
-
-            try
-            {
-                if (age < 0)
-                {
-                    throw new Exception("Age cannot be negative.");
-                   
-                }
-                else if (age < 18)
-                {
-                    throw new Exception("Age less than 18 is not allowed.");
-                }
-                else
-                {
-                    Console.WriteLine("Valid age entered: " + age);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error: " + ex.Message);
-            }
-
-
-
-            try
-            {
-                int user = int.Parse(Console.ReadLine());
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine("Error: " + ex.Message);
-            }
-            finally
-            {
-                Console.WriteLine("Program Ended.");
             }
         }
     }
