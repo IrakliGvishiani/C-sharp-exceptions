@@ -8,9 +8,9 @@ namespace ConsoleApp2
         static void Main(string[] args)
         {
           
-            FootballTeams teeam = new ();
+            //FootballTeams teeam = new ();
 
-            teeam.DisplayInfo();
+            //teeam.DisplayInfo();
         }
     }
 }
