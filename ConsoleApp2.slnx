@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="Console Counter-Strike(mini-simulation)/Console Counter-Strike(mini-simulation).csproj" Id="94af5304-0963-4ad1-b164-7b8d642f4ece" />
   <Project Path="ConsoleApp2/ConsoleApp2.csproj" />
   <Project Path="Hero.Villain/Hero.Villain.csproj" Id="b712e548-96b6-4239-8f87-373a33073d42" />
 </Solution>

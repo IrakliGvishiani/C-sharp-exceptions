@@ -1,0 +1,14 @@
+=== Game Started ===
+
+--- Round 1 ---
+
+--- Round 2 ---
+T1 killed CT2 with Glock
+
+--- Round 3 ---
+CT1 killed T2 with AK-47
+
+--- Round 4 ---
+T1 killed CT1 with Glock
+
+Winner Team: Terrorists
