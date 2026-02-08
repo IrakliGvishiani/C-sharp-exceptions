@@ -7,7 +7,7 @@ namespace Console_Counter_Strike_mini_simulation_.Weapons
      class Pistol : Weapon
     
         {
-        public Pistol() : base("Glock", 100, 300)
+        public Pistol() : base("Glock", 100, 400)
         {
         }
         public override int Shoot()

@@ -27,10 +27,13 @@ namespace Console_Counter_Strike_mini_simulation_.Players
         {
             return Health > 0;
         }
+        string path = "C:\\Users\\user\\source\\repos\\ConsoleApp2\\Console Counter-Strike(mini-simulation)\\Results.txt";
+        
 
         public void shoot (Player target)
         {
             bool isTargetAlive = target.IsAlive();
+      
 
             if (EquippedWeapon == null)
             {
@@ -47,17 +50,20 @@ namespace Console_Counter_Strike_mini_simulation_.Players
                 int damageDealt = EquippedWeapon.Shoot();
                 target.Health -= damageDealt;
 
-                if (target.Health < 0)
+                if (target.Health <= 0)
                 {
                     target.Health = 0;
-                    Console.WriteLine($"{Name} shoots {target.Name} with {EquippedWeapon.Name} for {damageDealt} damage! {target.Name} is killed!");
+                    Console.WriteLine($"{Name} Killed {target.Name} with {EquippedWeapon.Name}");
+                    File.AppendAllText(path, $"{Name} Killed {target.Name} with {EquippedWeapon.Name}\n");
                 }
                 else
                 {
                     Console.WriteLine($"{Name} shoots {target.Name} with {EquippedWeapon.Name} for {damageDealt} damage! {target.Name} now has {target.Health} health.");
-
+                    File.AppendAllText(path, $"{Name} shoots {target.Name} with {EquippedWeapon.Name} for {damageDealt} damage! {target.Name} now has {target.Health} health.\n");
                 }
             }
+
+
 
         }
     }

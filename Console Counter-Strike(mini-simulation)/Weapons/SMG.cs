@@ -6,7 +6,7 @@ namespace Console_Counter_Strike_mini_simulation_.Weapons
 {
      class SMG : Weapon
     {
-        public SMG() : base("UMP-45",100, 1000)
+        public SMG() : base("UMP-45",100, 700)
         {
         }
         public override int Shoot()

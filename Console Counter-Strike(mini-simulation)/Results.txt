@@ -1,14 +1,11 @@
-=== Game Started ===
-
---- Round 1 ---
-
---- Round 2 ---
-T1 killed CT2 with Glock
-
---- Round 3 ---
-CT1 killed T2 with AK-47
-
---- Round 4 ---
-T1 killed CT1 with Glock
-
-Winner Team: Terrorists
+Round 1
+tr shoots ct with UMP-45 for 55 damage! ct now has 45 health.
+ct shoots tr with AK-47 for 81 damage! tr now has 19 health.
+Round 2
+ct Killed tr with AK-47
+Round 3
+ct shoots tr1 with AK-47 for 58 damage! tr1 now has 42 health.
+tr1 Killed ct with UMP-45
+Round 4
+ct1 Killed tr1 with Glock
+WINNER TEAM : Counter-Terrorists
