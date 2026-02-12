@@ -1,11 +1,14 @@
 Round 1
-tr shoots ct with UMP-45 for 55 damage! ct now has 45 health.
-ct shoots tr with AK-47 for 81 damage! tr now has 19 health.
+tr1 shoots ct with UMP-45 for 90 damage! ct now has 10 health.
+ct shoots tr1 with AK-47 for 49 damage! tr1 now has 51 health.
 Round 2
-ct Killed tr with AK-47
+ct1 shoots tr with Glock for 68 damage! tr now has 32 health.
+tr shoots ct1 with UMP-45 for 69 damage! ct1 now has 31 health.
 Round 3
-ct shoots tr1 with AK-47 for 58 damage! tr1 now has 42 health.
-tr1 Killed ct with UMP-45
+ct1 shoots tr with Glock for 12 damage! tr now has 20 health.
+tr Killed ct1 with UMP-45
 Round 4
-ct1 Killed tr1 with Glock
-WINNER TEAM : Counter-Terrorists
+ct Killed tr1 with AK-47
+Round 5
+tr Killed ct with UMP-45
+WINNER TEAM : Terrorists
