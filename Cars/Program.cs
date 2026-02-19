@@ -127,8 +127,9 @@
             //var top10 = GetTop10EconomicCars(sortedCars);
             //var filtered = filterCarsByName(sortedCars);
 
+            var fast = GetTop10Fastest(sortedCars);
 
-            foreach (var item in sortedCars)
+            foreach (var item in fast)
             {
                 Console.WriteLine(
                          $@"{item.Make} 
@@ -197,16 +198,19 @@
             return cars;
         }
 
-        //static List<Cars> GetTop10Fastest(List<Cars> cars)
-        //{
-        //    List<Cars> fastestCars = new List<Cars>();
+        static List<Cars> GetTop10Fastest(List<Cars> cars)
+        {
+            List<Cars> fastestCars = new List<Cars>();
 
-        //    for (int i = 0; i < cars.Count; i++)
-        //    {
+            for (int i = cars.Count - 1; i >= 10; i--)
+            {
+                fastestCars.Add(cars[i]);
+            }
 
-        //    }
+            return fastestCars;
+
+        }
 
 
-        //}
     }
 }
